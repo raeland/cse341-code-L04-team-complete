@@ -1,21 +1,22 @@
-const swaggerAutogen = require('swagger-autogen')();
+const swaggerAutogen = require('swagger-autogen')()
 
 const doc = {
   info: {
     title: 'My API',
     description: 'Temple API',
   },
-  host: 'localhost:8080',
-  schemes: ['http','https'],
-};
+  //host: 'localhost:8080',
+  host: 'cse341-4bnb.onrender.com',
+  schemes: ['http','https']
+}
 
-const outputFile = './swagger.json';
-const endpointsFiles = ['./routes/index.js'];
+const outputFile = './swagger.json'
+const endpointsFiles = ['./routes/index.js']
 
 // generate swagger.json
-swaggerAutogen(outputFile, endpointsFiles, doc);
+swaggerAutogen(outputFile, endpointsFiles, doc)
 
 // Run server after it gets generated
 // swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
-//   await import('./index.js');
-// });
+//   await import('./index.js')
+// })
